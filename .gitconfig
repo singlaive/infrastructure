@@ -1,0 +1,40 @@
+[user]
+	email = mmeng@cisco.com
+	name = Murphy Meng
+[ivy]
+	cache = /home/ivycache
+[core]
+    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	autocrlf = input
+	safecrlf = true
+	pager = less -+$LESS -FRX
+[color]
+    ui = auto
+	interactive = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    bv = branch -vv
+    co = checkout
+    df = diff
+    dc = diff --cached
+    lol = log --color --pretty=format:'%h %ad %Cgreen%an %Creset| %s%C(yellow)%d %Creset' --abbrev-commit --date=short
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
+    t = !gittag.py
+	db = branch -D
